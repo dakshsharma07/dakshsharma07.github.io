@@ -153,6 +153,12 @@
     }
 }
 
+/* Base styles to prevent horizontal scroll */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 /* Custom CSS variables for consistent theming */
 :root {
     --indigo: indigo;     /* Primary brand color */
@@ -529,6 +535,18 @@ body {
     .mobile-nav-link:hover {
         background-color: #f3f4f6;
         color: #1a237e;
+    }
+
+    .max-w-7xl {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    section {
+        width: 100%;
+        overflow-x: hidden;
     }
 }
 
