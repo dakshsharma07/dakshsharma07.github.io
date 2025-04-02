@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Civisight</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16">
+                <div class="nav-container">
+                    <div class="logo-container">
+                        <a href="index.html" class="logo-link">
+                            <img src="images/gptCiviSightSideways.png" alt="Civisight Logo" class="logo">
+                        </a>
+                    </div>
+                    <div class="nav-links">
+                        <div class="ml-auto flex items-center">
+                            <div class="hidden sm:flex sm:space-x-8">
+                                <a href="index.html" class="nav-link">Home</a>
+                                <a href="index.html#how-it-works" class="nav-link">How It Works</a>
+                                <a href="/contact.html" class="nav-link active">Contact</a>
+                                <a href="about.html" class="nav-link">About Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <!-- Header Section -->
+        <div class="text-center mb-16">
+            <h1 class="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-4">Contact Us</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                We'd love to hear from you — whether you're a government agency, civic partner, or GovTech enthusiast.
+            </p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto mb-16">
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                <input type="hidden" name="access_key" value="3bd6b941-becb-49b5-9cb9-e1d8dcde6bf3">
+                
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                    <input type="text" name="name" id="name" required 
+                    class="mt-1 block w-full rounded-md bg-white border border-gray-300 text-gray-900 placeholder-gray-500 shadow-sm focus:border-blue-600 focus:ring-blue-600 focus:ring-1">
+                </div>
+
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                    <input type="email" name="email" id="email" required 
+                    class="mt-1 block w-full rounded-md bg-white border border-gray-300 text-gray-900 placeholder-gray-500 shadow-sm focus:border-blue-600 focus:ring-blue-600 focus:ring-1">
+                </div>
+
+                <div>
+                    <label for="organization" class="block text-sm font-medium text-gray-700">Organization (Optional)</label>
+                    <input type="text" name="organization" id="organization" 
+                    class="mt-1 block w-full rounded-md bg-white border border-gray-300 text-gray-900 placeholder-gray-500 shadow-sm focus:border-blue-600 focus:ring-blue-600 focus:ring-1">
+                </div>
+
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                    <textarea name="message" id="message" rows="4" required 
+                    class="mt-1 block w-full rounded-md bg-white border border-gray-300 text-gray-900 placeholder-gray-500 shadow-sm focus:border-blue-600 focus:ring-blue-600 focus:ring-1"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit" 
+                            class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        Send Message
+                    </button>
+                </div>
+
+                <div id="success-message" class="hidden text-green-600 text-center mt-4">
+                    Thank you! Your message has been sent successfully.
+                </div>
+            </form>
+        </div>
+
+        <!-- Alternate Contact Info Section -->
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto mb-16">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+            <div class="space-y-4">
+                <div class="flex items-center">
+                    <svg class="h-6 w-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <div>
+                        <p class="text-lg text-gray-900">Email</p>
+                        <p class="text-gray-600">gatech.civisight@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center">
+                    <svg class="h-6 w-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                    <div>
+                        <p class="text-lg text-gray-900">Follow Us</p>
+                        <p class="text-gray-600">LinkedIn Profile Coming Soon</p>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="text-gray-600">We're a remote-first team, passionate about making government processes more efficient and accessible.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="text-center">
+                <a href="/" class="inline-flex items-center">
+                    <svg class="h-6 w-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                    <span class="text-gray-900">Back to Home</span>
+                </a>
+                <p class="mt-4 text-gray-600"> 2025 Civisight. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add form submission handling
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            
+            fetch(this.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('success-message').classList.remove('hidden');
+                this.reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
