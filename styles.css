@@ -479,6 +479,10 @@ body {
         width: 100%;
     }
 
+    .nav-links {
+        display: none;
+    }
+
     #mobile-menu-button {
         display: flex;
         align-items: center;
@@ -492,6 +496,7 @@ body {
         transition: all 0.3s ease-in-out;
         transform: translateY(-10px);
         opacity: 0;
+        width: 100%;
     }
 
     #mobile-menu:not(.hidden) {
@@ -499,14 +504,26 @@ body {
         opacity: 1;
     }
 
+    #mobile-menu .px-2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
     .mobile-nav-link {
         display: block;
+        width: 100%;
         padding: 0.75rem 1rem;
         color: #334155;
         font-size: 1rem;
         font-weight: 500;
         text-decoration: none;
         transition: all 0.2s ease-in-out;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .mobile-nav-link:last-child {
+        border-bottom: none;
     }
 
     .mobile-nav-link:hover {
