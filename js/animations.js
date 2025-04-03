@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const regularSections = [
         document.querySelector('.challenge-section'),
         document.querySelector('.solution-section'),
-        document.querySelector('.why-civisight-section')
+        document.querySelector('.why-civisight')
     ];
 
     // Handle How It Works steps
