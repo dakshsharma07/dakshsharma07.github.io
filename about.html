@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="about-page">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
 </head>
 <body class="bg-white text-gray-900">
     <!-- Navigation Bar -->
-    <nav class="bg-white shadow-md navbar">
+    <nav class="bg-white shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex h-16">
                 <div class="nav-container">
@@ -22,16 +22,31 @@
                             <img src="images/gptCiviSightSideways.png" alt="Civisight Logo" class="logo">
                         </a>
                     </div>
-                    <div class="nav-links">
-                        <div class="ml-auto flex items-center">
-                            <div class="hidden sm:flex sm:space-x-8">
-                                <a href="index.html" class="nav-link">Home</a>
-                                <a href="index.html#how-it-works" class="nav-link">How It Works</a>
-                                <a href="/contact.html" class="nav-link">Contact</a>
-                                <a href="about.html" class="nav-link active">About Us</a>
-                            </div>
-                        </div>
+                    <!-- Desktop Navigation -->
+                    <div class="nav-links hidden md:flex">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="index.html#how-it-works" class="nav-link">How It Works</a>
+                        <a href="contact.html" class="nav-link">Contact</a>
+                        <a href="about.html" class="nav-link active">About Us</a>
                     </div>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="md:hidden">
+                        <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <svg id="close-icon" class="hidden w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-2">
+                    <a href="index.html" class="mobile-nav-link">Home</a>
+                    <a href="index.html#how-it-works" class="mobile-nav-link">How It Works</a>
+                    <a href="contact.html" class="mobile-nav-link">Contact</a>
+                    <a href="about.html" class="mobile-nav-link">About Us</a>
                 </div>
             </div>
         </div>
@@ -193,5 +208,18 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            hamburgerIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>

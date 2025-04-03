@@ -171,7 +171,9 @@ nav {
 }
 
 /* Add padding to body to account for fixed nav */
-body {
+.index-page body,
+.about-page body,
+.contact-page body {
     padding-top: 5.5rem;
 }
 
