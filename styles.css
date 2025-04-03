@@ -157,6 +157,22 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    position: relative;
+}
+
+/* Navigation base styles */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: white;
+}
+
+/* Add padding to body to account for fixed nav */
+body {
+    padding-top: 5.5rem;
 }
 
 /* Custom CSS variables for consistent theming */
@@ -165,14 +181,6 @@ html, body {
     --slate: #475569;    /* Secondary text color */
     --soft-gray: #f1f5f9; /* Background color */
     --navy: #1f2937;
-}
-
-/* Navigation base styles */
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    background-color: white;
 }
 
 /* Navigation styles */
@@ -240,11 +248,6 @@ nav {
     height: 4rem;
     padding: 0rem;
     background-color: white;
-}
-
-/* Add padding to the body to prevent content from being hidden under the sticky nav*/
-body {
-    padding-top: 1rem;
 }
 
 /* Hero section styles */
