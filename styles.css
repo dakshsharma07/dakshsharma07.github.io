@@ -252,70 +252,116 @@ nav {
     background-color: white;
 }
 
-/* Hero section styles */
+/* Hero Section Styles */
 .hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    overflow: hidden;
-    padding: 5rem 0;
 }
 
-.hero-section::before {
-    content: '';
+.hero-video-container {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('images/lincolnMemorial.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.3;
+    width: 100%;
+    height: 100%;
     z-index: 0;
 }
 
-.hero-content {
-    position: relative;
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
     z-index: 1;
-    color: white;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 10;
 }
 
 .hero-headline {
-    font-size: 2.5rem;
-    line-height: 1.2;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 800;
-    color: #1f2937;
-    background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: white;
+    white-space: nowrap;
+}
+
+.hero-headline span {
+    display: block;
+    color: white;
+}
+
+.hero-headline span:first-child {
+    white-space: nowrap;
 }
 
 .hero-subheadline {
-    margin-top: 0.75rem;
-    max-width: 28rem;
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+}
+
+/* Button styles */
+.btn-primary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
     font-size: 1rem;
-    color: #6b7280;
-    margin-left: auto;
-    margin-right: auto;
-    background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    background-color: #3b82f6;
+    color: white;
+    transition: all 0.3s ease;
 }
 
-@media (min-width: 640px) {
-    .hero-headline {
-        font-size: 3.125rem;
-    }
+.btn-primary:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
 }
 
-@media (min-width: 768px) {
+/* Responsive adjustments */
+@media (max-width: 768px) {
     .hero-headline {
-        font-size: 3.75rem;
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
     }
     
     .hero-subheadline {
-        font-size: 1.125rem;
-        max-width: 48rem;
-        margin-top: 1.5rem;
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 80vh;
+    }
+    
+    .hero-headline {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subheadline {
+        font-size: 1.1rem;
     }
 }
 

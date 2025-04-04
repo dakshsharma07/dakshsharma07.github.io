@@ -53,12 +53,20 @@
     </nav>
 
     <!-- Hero Section - Main value proposition and call to action -->
-    <section id="hero" class="hero-section relative bg-white py-16 sm:py-24 lg:py-32">
+    <section id="hero" class="hero-section relative">
+        <div class="hero-video-container">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="videos/mcdonough-hero.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="hero-content text-center">
+            <div class="hero-content text-center z-10">
                 <!-- Main headline with responsive text sizing -->
                 <h1 class="hero-headline">
-                    <span class="block">Smarter Government Resource Management</span>
+                    <span class="block">Smarter Government Resource</span>
+                    <span class="block">Management</span>
                 </h1>
                 <!-- Subheadline with responsive text sizing -->
                 <p class="hero-subheadline">
